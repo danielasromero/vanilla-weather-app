@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+h1 {
+  display:inline;
+  padding-left: 380px;
+  padding-top: 40px;
+  font-weight:700;
+  position: relative;
+  top:20px;
+  
+}
+
+h2 {
+  display: inline;
+  float: right;
+  position:relative;
+  right:385px;
+  top:30px;
+}
+
+form {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#wrapper {
+  border: 3px rgb(58, 111, 160) solid ;
+  width:260px;
+  padding:20px 5px 20px 5px;
+  position:relative;
+  top:60px;
+  margin: 0px auto;
+  border-radius: 5px;
+}
+
+.high-low {
+  display:inline;
+  float:right;
+  position:relative;
+  vertical-align: baseline;
+  right: 185px;
+  top:25px;
+}
+
+.day-time{
+  padding-top: 50px;
+  position:relative;
+  left:370px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#current-time {
+  position: relative;
+  left: 370px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.five-day-forecast-day , .five-day-forecast-temp , .high-low {
+  list-style: none;
+  display:inline-block;
+}
+
+.search-button {
+  background-color: #7ea0dfad;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgb(58, 111, 160);
+}
+
+.search-button:hover {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  background: rgb(58, 111, 160); 
+}
+
+.row {
+  float:right;
+  position:relative;
+  bottom:80px;
+  right:300px;
+  border:solid;
+  padding:5px 10px;
+  border-radius: 5px;
+  border: 3px rgb(58, 111, 160) solid ;
+}
+
+.col {
+  padding:11px;
+  text-align:center;
+}
+
+.five-day-forecast-day li, .five-day-forecast-temp li {
+  font-size: 18px;
+  text-align: center;
+}
+
+.celcius-fahrenheit {
+  font-size: small;
+  vertical-align: text-top;
+  position: relative;
+  right: 6px;
+}
+
+#current-location-button {
+  display: block;
+  position: relative;
+  bottom: 30px;
+  left:700px;
+  background-color: #8d43aa9a;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgb(58, 111, 160);
+}
+
+#current-location-button:hover {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  background: rgb(97, 39, 121); 
+}
