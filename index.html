@@ -12,144 +12,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Homework Two</title>
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <form>
-        <input
-          type="text"
-          placeholder="Search City"
-          class="city-search"
-          name="city"
-          autofill="off"
-          id="user-city-input"
-        />
-        <input type="submit" value="Search" class="search-button" id="search-button"/>
-      </form>
-
-      <button id ="current-location-button">
-        Current Location
-      </button>
-
-        <h1 id="city">
-            Calgary
-        </h1>
-
-        <h2>
-          <span id="temperature">
-            -13
-          </span>
-              <span class="celcius-fahrenheit">
-                <a href="#" id="celcius-link">
-                °C
-                </a>
-                 |
-                <a href="#" id="fahrenheit-link">
-                °F
-                </a>
-              </span>
-              ☀︎
-        </h2>
-
-        <ul class="high-low">
-          <li id = "high-temp">
-            H: -8ºC
-          </li>
-          <li id="low-temp">
-            L: -20°C 
-          </li>
-        </ul>
-       
-        <div class="day-time" id="current-day">
-            Friday
-        </div>
-        <div id="current-time">
-          1:19pm
-        </div>
-        
-          
-
+      <div class="main-info">
         <div class="row">
-          <div class="col">
-            2pm
-            <br>
-            -13ºC 
-            <br>
-            ⛅
+          <div class="col-4">
+        <form>
+            <input
+            type="text"
+            placeholder="Search City"
+            class="city-search"
+            name="city"
+            autofill="off"
+            id="user-city-input"
+          />
+            </div>
+            <div class="col-4">
+              <input type="submit" value="Search" class="search-button" id="search-button"/>
+              </form>
+              </div>
+          <div class="col-4">
+            <button id ="current-location-button">
+              Current Location
+            </button>
+            </div>
           </div>
-          <div class="col">
-            3pm
-            <br>
-            -11ºC 
-            <br>
-            ⛅
-          </div>
-          <div class="col">
-            4pm
-            <br>
-            -11ºC
-            <br>
-            ⛅
-          </div>
-          <div class="col">
-            5pm
-            <br>
-            -16ºC
-            <br> 
-            ⛅
-          </div>
-          <div class="col">
-            6pm
-            <br>
-            -18ºC 
-            <br>
-            ⛅
-          </div>
-          </div>
-        
+  
+          <div class="row">
+            <div class="col-8">
+              <h1 id="city">
+                Calgary
+            </h1>
+            <h2>
+              <div class="day-time">
+               <div id="current-day">
+                 Friday
+               </div>
+               <div id="current-time">
+               1:19pm
+               </div>
+              </div>
+             </h2>
+            </div>
 
-            
-			<div id="wrapper">
-				<ul class="five-day-forecast-day">
-          <li>
-            Saturday      
-          </li>
-          <li>
-            Sunday     
-          </li> 
-          <li>
-            Monday      
-          </li> 
-          <li>
-            Tuesday     
-          </li> 
-          <li>
-            Wednesday     
-          </li>
-        </ul>              
-           
-				<ul class="five-day-forecast-temp">
-				<li>
-					-8ºC ⛅
-				</li>	
-				<li>
-					-4ºC ⛅
-				</li>
-				<li>
-					-7ºC 🌨️
-				</li>
-				<li>
-					-1ºC 🌨️
-				</li>
-				<li>
-					-2ºC ⛅
-				</li>
-			  </ul>
+            <div class="col-4" id="all-weather-info">
+              <span id="temperature">
+                -13
+              </span>
+                  <span class="celcius-fahrenheit">
+                    <a href="#" id="celcius-link">
+                    °C
+                    </a>
+                     |
+                    <a href="#" id="fahrenheit-link">
+                    °F
+                    </a>
+                  </span>
+                  ☀︎
+    
+            <ul class="high-low">
+              <li id = "high-temp">
+                H: -8ºC
+              </li>
+              <li id="low-temp">
+                L: -20°C 
+              </li>
+            </ul>
+  
 
-			</div>
-			
-			  <div><a href="https://github.com/danielasromero/my-weather-app" target="_blank">
+            </div>
+
+
+          </div>
+         
+  
+          
+    
+    </div>
+
+			  <div>
+          <a href="https://github.com/danielasromero/my-weather-app" target="_blank">
           Open-source code
         </a>
           by Daniela Romero</div>
