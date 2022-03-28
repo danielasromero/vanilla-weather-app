@@ -32,6 +32,11 @@ function changeCity(event) {
 function showTemp(response) {
     let heading = document.querySelector("#city");
     heading.innerHTML = response.data.name;
+    console.log(response.data)
+    console.log(response.data.wind.speed)
+    console.log(response.data.weather[0].description)
+    console.log(response.data.weather[0].main)
+    console.log(response.data.weather[0].icon)
     let temperature = Math.round(response.data.main.temp);
     let tempElement = document.querySelector("#temperature");
     tempElement.innerHTML = temperature;

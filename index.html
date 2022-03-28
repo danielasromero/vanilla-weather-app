@@ -27,7 +27,7 @@
             name="city"
             autofill="off"
             id="user-city-input"
-          />
+            />
             </div>
             <div class="col-4">
               <input type="submit" value="Search" class="search-button" id="search-button"/>
@@ -57,8 +57,8 @@
              </h2>
             </div>
 
-            <div class="col-4" id="all-weather-info">
-              <span id="temperature">
+            <div class="col-4">
+              <span class="temp-value">
                 -13
               </span>
                   <span class="celcius-fahrenheit">
@@ -70,35 +70,41 @@
                     °F
                     </a>
                   </span>
-                  ☀︎
-    
-            <ul class="high-low">
-              <li id = "high-temp">
-                H: -8ºC
-              </li>
-              <li id="low-temp">
-                L: -20°C 
-              </li>
-            </ul>
-  
+                  ☀
 
+                  <ul class="high-low">
+                    <li id = "high-temp">
+                      H: -8ºC
+                    </li>
+                    <li id="low-temp">
+                      L: -20°C 
+                    </li>
+                  </ul>
+                  
             </div>
+       
+
+          <ul class="weather-descriptions">
+            <li class="wind-speed">
+              Wind Speed: 3km/h 
+            </li>
+            <li class="description">  
+              Clouds
+            </li>
+          </ul>
+
+        </div>
 
 
-          </div>
-         
-  
-          
-    
     </div>
 
-			  <div>
-          <a href="https://github.com/danielasromero/my-weather-app" target="_blank">
+			  <div class="github-link">
+          <a href= "https://github.com/danielasromero/vanilla-weather-app" target="_blank">
           Open-source code
         </a>
-          by Daniela Romero</div>
-              
-       
+          by Daniela Romero
+        </div>
+
       </div>
       <script src="src/app.js"></script>
   </body>

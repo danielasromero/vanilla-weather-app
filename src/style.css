@@ -17,10 +17,13 @@ h1 {
   background-color: #ececec;
 }
 
+.col-4 {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+
 .high-low {
-  display:inline;
-  float:right;
-  vertical-align: baseline;
   list-style: none;
 }
 
@@ -42,13 +45,6 @@ h1 {
   background: rgb(58, 111, 160); 
 }
 
-.celcius-fahrenheit {
-  font-size: small;
-  vertical-align: text-top;
-  position: relative;
-  right: 6px;
-}
-
 #current-location-button {
   display: block;
   background-color: #8d43aa9a;
@@ -65,4 +61,13 @@ h1 {
 #all-weather-info {
   padding-top: 10px;
   text-align: center;
+}
+
+.github-link {
+  margin: 0 auto;
+}
+
+.weather-descriptions {
+  list-style: none;
+  float: right;
 }
