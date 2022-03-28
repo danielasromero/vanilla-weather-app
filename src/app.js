@@ -37,9 +37,9 @@ function showTemp(response) {
     console.log(response.data.weather[0].description)
     console.log(response.data.weather[0].main)
     console.log(response.data.weather[0].icon)
-    let temperature = Math.round(response.data.main.temp);
-    let tempElement = document.querySelector("#temperature");
-    tempElement.innerHTML = temperature;
+    let temperature_value = Math.round(response.data.main.temp);
+    let tempElement = document.querySelector("#temp-value");
+    tempElement.innerHTML = temperature_value;
 
     let temp_high = Math.round(response.data.main.temp_max);
     let tempHighElement = document.querySelector("#high-temp");
@@ -49,6 +49,14 @@ function showTemp(response) {
     let tempLowElement = document.querySelector("#low-temp");
     tempLowElement.innerHTML = `L: ${temp_low} °C`;
 
+    let wind_speed = Math.round(response.data.wind.speed);
+    let windSpeedElement = document.querySelector("#wind-speed");
+    windSpeedElement.innerHTML = `Wind Speed: ${wind_speed} km/h`
+
+    let descriptionElement = document.querySelector("#description");
+   //descriptionElement.innerHTML = response.data.weather[0].description;
+    descriptionElement.innerHTML = response.data.weather[0].main;
+    
   }
   
 let citySearch = document.querySelector("form");
