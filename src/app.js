@@ -32,6 +32,8 @@ function changeCity(event) {
 function showTemp(response) {
     let heading = document.querySelector("#city");
     heading.innerHTML = response.data.name;
+
+    console.log(response.data)
     
     let temperature_value = Math.round(response.data.main.temp);
     let tempElement = document.querySelector("#temp-value");
@@ -53,6 +55,9 @@ function showTemp(response) {
     descriptionElement.innerHTML = response.data.weather[0].description;
     //descriptionElement.innerHTML = response.data.weather[0].main;
     
+    let icon = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${icon}@2x.png`);
   }
   
 let citySearch = document.querySelector("form");
