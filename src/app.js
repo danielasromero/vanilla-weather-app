@@ -32,11 +32,7 @@ function changeCity(event) {
 function showTemp(response) {
     let heading = document.querySelector("#city");
     heading.innerHTML = response.data.name;
-    console.log(response.data)
-    console.log(response.data.wind.speed)
-    console.log(response.data.weather[0].description)
-    console.log(response.data.weather[0].main)
-    console.log(response.data.weather[0].icon)
+    
     let temperature_value = Math.round(response.data.main.temp);
     let tempElement = document.querySelector("#temp-value");
     tempElement.innerHTML = temperature_value;
@@ -54,8 +50,8 @@ function showTemp(response) {
     windSpeedElement.innerHTML = `Wind Speed: ${wind_speed} km/h`
 
     let descriptionElement = document.querySelector("#description");
-   //descriptionElement.innerHTML = response.data.weather[0].description;
-    descriptionElement.innerHTML = response.data.weather[0].main;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    //descriptionElement.innerHTML = response.data.weather[0].main;
     
   }
   

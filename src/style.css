@@ -1,11 +1,12 @@
 body {
   background: #7798e0;
+  font-family: var(--bs-body-font-family);
 }
 
 h1 {
   display:inline;
   font-weight:700;
-  padding-top: 10px;
+
 }
 
 .main-info {
@@ -17,14 +18,23 @@ h1 {
   background-color: #ececec;
 }
 
+#temp-value {
+  font-size: 24px;
+}
+
+#first-row {
+  padding-top:30px;
+}
+
 .col-4 {
   display:inline-block;
   vertical-align:middle;
 }
 
-
 .high-low {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .day-time{
@@ -58,16 +68,15 @@ h1 {
   background: rgb(97, 39, 121); 
 }
 
-#all-weather-info {
-  padding-top: 10px;
-  text-align: center;
-}
-
 .github-link {
   margin: 0 auto;
 }
 
 .weather-descriptions {
   list-style: none;
-  float: right;
+  padding:0;
+  text-align: center;
+  padding-top:10px;
+  font-size: medium;
+  font-weight: 300;
 }

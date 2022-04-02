@@ -18,7 +18,7 @@
     <div class="container">
       <div class="main-info">
         <div class="row">
-          <div class="col-4">
+          <div class="col-6">
         <form>
             <input
             type="text"
@@ -29,7 +29,7 @@
             id="user-city-input"
             />
             </div>
-            <div class="col-4">
+            <div class="col-2">
               <input type="submit" value="Search" class="search-button" id="search-button"/>
               </form>
               </div>
@@ -39,63 +39,77 @@
             </button>
             </div>
           </div>
-  
-          <div class="row">
-            <div class="col-8">
+
+          <div class="row" id="first-row">
+            <div class="col">
               <h1 id="city">
                 Calgary
-            </h1>
-            <h2>
-              <div class="day-time">
-               <div id="current-day">
-                 Friday
-               </div>
-               <div id="current-time">
-               1:19pm
-               </div>
-              </div>
-             </h2>
+              </h1>
+            </div>
+            
+            <div class="col-md-auto">
+              <div class="all-temp-info">
+                <span id="temp-value">
+                  -13
+                </span>
+                    <span class="celcius-fahrenheit">
+                      <a href="#" id="celcius-link">
+                      °C
+                      </a>
+                       |
+                      <a href="#" id="fahrenheit-link">
+                      °F
+                      </a>
+                    </span>
+                    ☀
+            </div>
+          </div>
+
+            <div class="col-md-auto">
+              <ul class="high-low">
+                <li id = "high-temp">
+                  H: -8ºC
+                </li>
+                <li id="low-temp">
+                  L: -20°C 
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6">
+              <h2>
+                <div class="day-time">
+                 <div id="current-day">
+                   Friday
+                 </div>
+                 <div id="current-time">
+                 1:19pm
+                 </div>
+                </div>
+               </h2>
             </div>
 
-            <div class="col-4">
-              <span id="temp-value">
-                -13
-              </span>
-                  <span class="celcius-fahrenheit">
-                    <a href="#" id="celcius-link">
-                    °C
-                    </a>
-                     |
-                    <a href="#" id="fahrenheit-link">
-                    °F
-                    </a>
-                  </span>
-                  ☀
+            <div class="col-6 col-md-6">
+              <h2>
+                <ul class="weather-descriptions">
 
-                  <ul class="high-low">
-                    <li id = "high-temp">
-                      H: -8ºC
-                    </li>
-                    <li id="low-temp">
-                      L: -20°C 
-                    </li>
-                  </ul>
-
+                  <li id="description">  
+                  Clouds
+                  </li>
+  
+                  <li id="wind-speed">
+                    Wind Speed: 3km/h 
+                  </li>
+                  
+                </ul>
+              </h2>
+            
             </div>
-       
-
-          <ul class="weather-descriptions">
-            <li id="wind-speed">
-              Wind Speed: 3km/h 
-            </li>
-            <li id="description">  
-              Clouds
-            </li>
-          </ul>
-
+          </div>
         </div>
-
-
+      </div>
     </div>
 
 			  <div class="github-link">
