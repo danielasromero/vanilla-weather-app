@@ -34,20 +34,22 @@ function showTemp(response) {
     heading.innerHTML = response.data.name;
 
     console.log(response.data)
-
+    console.log(response.data.weather[0].description)
     celciusTemp = response.data.main.temp;
     
     let temperature_value = Math.round(celciusTemp);
     let tempElement = document.querySelector("#temp-value");
     tempElement.innerHTML = temperature_value;
 
-    let temp_high = Math.round(response.data.main.temp_max);
+    // Removed high - low for now - fully removed from html 
+
+    /*let temp_high = Math.round(response.data.main.temp_max);
     let tempHighElement = document.querySelector("#high-temp");
     tempHighElement.innerHTML = `H: ${temp_high} °C`;
 
     let temp_low = Math.round(response.data.main.temp_min);
     let tempLowElement = document.querySelector("#low-temp");
-    tempLowElement.innerHTML = `L: ${temp_low} °C`;
+    tempLowElement.innerHTML = `L: ${temp_low} °C`; */
 
     let wind_speed = Math.round(response.data.wind.speed);
     let windSpeedElement = document.querySelector("#wind-speed");
