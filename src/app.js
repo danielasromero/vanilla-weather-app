@@ -17,17 +17,22 @@ if (now.getMinutes() < 10){
     currentTime.innerHTML = `${now.getHours()}:${now.getMinutes()}`;
 }
 
-let apiKey = "35a610a7ee1e91c0a989468ef9ec0328";
+
 
 // City Search + API weather 
+
+function search(city) {
+    let apiKey = "35a610a7ee1e91c0a989468ef9ec0328";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(showTemp);
+}
 function changeCity(event) {
     event.preventDefault();
     let heading = document.querySelector("#city");
     let cityInput = document.querySelector("#user-city-input");
-    //heading.innerHTML = cityInput.value;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiKey}`;
-    axios.get(apiUrl).then(showTemp);
-};
+    search(cityInput.value);
+    console.log(cityInput.value)
+}
 
 function showTemp(response) {
     let heading = document.querySelector("#city");
@@ -57,7 +62,6 @@ function showTemp(response) {
 
     let descriptionElement = document.querySelector("#description");
     descriptionElement.innerHTML = response.data.weather[0].description;
-    //descriptionElement.innerHTML = response.data.weather[0].main;
     
     let icon = response.data.weather[0].icon;
     let iconElement = document.querySelector("#icon");
@@ -73,14 +77,14 @@ citySearch.addEventListener("submit", changeCity);
   let apiKey = "35a610a7ee1e91c0a989468ef9ec0328";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemp);
-} */
+} 
 
 function getCurrentLocation(event) {
     navigator.geolocation.getCurrentPosition(getCurrentTemp);
 }
 
 let currentCity = document.querySelector("#current-location-button")
-currentCity.addEventListener("click", getCurrentLocation);
+currentCity.addEventListener("click", getCurrentLocation);*/
 
 // Bonus: Celcius to Farenheit conversion
 let temp = document.querySelector("#temp-value");
@@ -106,4 +110,4 @@ farLink.addEventListener("click",tempToFahrenheit);
 
 let celciusTemp = null;
 
-changeCity("New York");
+search("Sydney");

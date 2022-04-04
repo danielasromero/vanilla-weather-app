@@ -6,7 +6,6 @@ body {
 h1 {
   display:inline;
   font-weight:700;
-
 }
 
 .main-info {
@@ -19,7 +18,7 @@ h1 {
 }
 
 #temp-value {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 #first-row {
@@ -63,7 +62,9 @@ h1 {
 }
 
 .github-link {
-  margin: 0 auto;
+  margin: 40px auto;
+  position: relative;
+  left: 350px;
 }
 
 .weather-descriptions {
@@ -86,3 +87,6 @@ h1 {
   text-decoration: none;
 }
 
+.celcius-fahrenheit {
+  vertical-align: baseline;
+}
