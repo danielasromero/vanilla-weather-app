@@ -31,12 +31,6 @@ h1 {
   vertical-align:middle;
 }
 
-.high-low {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .day-time{
   padding-top: 10px;
   font-weight: 300;
@@ -80,4 +74,14 @@ h1 {
   font-size: medium;
   font-weight: 300;
   text-transform: capitalize;
+}
+
+.celcius-fahrenheit .active {
+  color:rgb(33,33,33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.celcius-fahrenheit .active:hover {
+  text-decoration: none;
 }

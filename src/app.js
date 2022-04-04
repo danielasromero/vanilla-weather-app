@@ -34,8 +34,10 @@ function showTemp(response) {
     heading.innerHTML = response.data.name;
 
     console.log(response.data)
+
+    celciusTemp = response.data.main.temp;
     
-    let temperature_value = Math.round(response.data.main.temp);
+    let temperature_value = Math.round(celciusTemp);
     let tempElement = document.querySelector("#temp-value");
     tempElement.innerHTML = temperature_value;
 
@@ -78,21 +80,26 @@ function getCurrentLocation(event) {
 let currentCity = document.querySelector("#current-location-button")
 currentCity.addEventListener("click", getCurrentLocation);
 
-
-
 // Bonus: Celcius to Farenheit conversion
-//let temp = document.querySelector("#temperature");
+let temp = document.querySelector("#temp-value");
 
-/* function tempToCelcius(event){
+function tempToCelcius(event){
     event.preventDefault();
-    temp.innerHTML = -13;
+    farLink.classList.remove("active");
+    celciusLink.classList.add("active");
+    temp.innerHTML = Math.round(celciusTemp);
 }
 function tempToFahrenheit(event){
     event.preventDefault();
-    temp.innerHTML = 9;
+    celciusLink.classList.remove("active");
+    farLink.classList.add("active");
+    let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+    temp.innerHTML = Math.round(fahrenheitTemp);
 }
-let tempCel = document.querySelector("#celcius-link");
-tempCel.addEventListener("click", tempToCelcius);
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", tempToCelcius);
 
-let tempFar = document.querySelector("#fahrenheit-link");
-tempFar.addEventListener("click",tempToFahrenheit); */
+let farLink = document.querySelector("#fahrenheit-link");
+farLink.addEventListener("click",tempToFahrenheit); 
+
+let celciusTemp = null;
