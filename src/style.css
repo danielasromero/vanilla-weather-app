@@ -18,8 +18,14 @@ h1 {
 }
 
 #temp-value {
-  font-size: 36px;
+  font-size: 28px;
+  vertical-align: baseline;
 }
+
+#celcius {
+  font-size: 28px;
+}
+
 
 #first-row {
   padding-top:30px;
@@ -75,20 +81,6 @@ h1 {
   font-size: medium;
   font-weight: 300;
   text-transform: capitalize;
-}
-
-.celcius-fahrenheit .active {
-  color:rgb(33,33,33);
-  cursor: default;
-  text-decoration: none;
-}
-
-.celcius-fahrenheit .active:hover {
-  text-decoration: none;
-}
-
-.celcius-fahrenheit {
-  vertical-align: baseline;
 }
 
 .weather-forecast {
